@@ -13,7 +13,7 @@ class AppNetworkManager {
   static const String _baseUrl = 'https://633c9cf0f2b0e623dc6543a4.mockapi.io/api/v1/';
 
   INetworkManager networkManager = NetworkManager(
-      isEnableLogger: true,
+      isEnableLogger: false,
       options: BaseOptions(
         baseUrl: _baseUrl,
         headers: {

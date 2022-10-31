@@ -1,8 +1,10 @@
+// ignore_for_file: implementation_imports
+
 import 'dart:convert';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-
+import 'package:dio/src/adapters/io_adapter.dart' as adapter;
 import 'package:logger/logger.dart';
 
 import '../../base/model/network/INetworkModel.dart';
@@ -26,6 +28,7 @@ class NetworkManager with DioMixin implements Dio, INetworkManager {
   }) {
     this.options = options;
     _addLoggerInterceptor(isEnableLogger ?? false);
+    httpClientAdapter = adapter.createAdapter();
   }
 
   late INetworkModel? errorModel;

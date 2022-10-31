@@ -18,7 +18,41 @@ class _UserViewState extends State<UserView> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => UserCubit(UserService(AppNetworkManager.instance.networkManager)),
-      child: Container(),
+      child: Scaffold(
+        appBar: AppBar(title: Text('Kullanıcı Listesi')),
+        body: _body(),
+      ),
+    );
+  }
+
+  Widget _body() {
+    return BlocConsumer<UserCubit, UserState>(
+      listener: (context, state) {},
+      builder: (context, state) {
+        var cubit = context.read<UserCubit>();
+        if (state.runtimeType == UserInitialState) {
+          return const Align(
+            alignment: Alignment.topCenter,
+            child: Padding(
+              padding: EdgeInsets.all(8.0),
+              child: CircularProgressIndicator.adaptive(),
+            ),
+          );
+        } else {
+          return _bodyListView(cubit);
+        }
+      },
+    );
+  }
+
+  ListView _bodyListView(UserCubit cubit) {
+    return ListView.builder(
+      itemCount: cubit.users.length,
+      itemBuilder: (BuildContext context, int index) {
+        return Column(
+          children: [Text(cubit.users[index].name ?? '')],
+        );
+      },
     );
   }
 }
