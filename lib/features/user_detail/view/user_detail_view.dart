@@ -50,26 +50,30 @@ class _UserDetailViewState extends State<UserDetailView> {
     if (state is UserDetialInitialState) {
       return const LoadingWidget();
     } else {
-      return Column(
-        children: [
-          UserCard(
-            avatar: widget.userModel.avatar,
-            name: widget.userModel.name,
-          ),
-          const SizedBox(height: 20),
-          buildUserInfo(title: 'Tel No', value: cubit.userDetal.phoneNumber),
-          buildUserInfo(title: 'Eposta', value: cubit.userDetal.email),
-          buildUserInfo(title: 'İlçe', value: cubit.userDetal.county),
-          buildUserInfo(title: 'İl', value: cubit.userDetal.city),
-          buildUserInfo(title: 'Ülke', value: cubit.userDetal.country),
-        ],
+      return Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 18),
+        child: Column(
+          children: [
+            UserCard(
+              avatar: widget.userModel.avatar,
+              name: widget.userModel.name,
+              elevation: 0,
+            ),
+            const SizedBox(height: 20),
+            buildUserInfo(title: 'Tel No', value: cubit.userDetal.phoneNumber),
+            buildUserInfo(title: 'Eposta', value: cubit.userDetal.email),
+            buildUserInfo(title: 'İlçe', value: cubit.userDetal.county),
+            buildUserInfo(title: 'İl', value: cubit.userDetal.city),
+            buildUserInfo(title: 'Ülke', value: cubit.userDetal.country),
+          ],
+        ),
       );
     }
   }
 
   Widget buildUserInfo({required String title, required String? value}) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 18),
+      padding: const EdgeInsets.only(left: 8.0, bottom: 18),
       child: Row(
         children: [
           Expanded(

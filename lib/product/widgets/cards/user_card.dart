@@ -7,12 +7,16 @@ class UserCard extends StatelessWidget {
     Key? key,
     this.avatar,
     this.name,
+    this.elevation,
   }) : super(key: key);
   final String? avatar;
   final String? name;
+  final double? elevation;
   @override
   Widget build(BuildContext context) {
     return Card(
+      margin: EdgeInsets.zero,
+      elevation: elevation,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8.0),
         child: Row(
