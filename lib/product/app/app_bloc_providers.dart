@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../routing/app_route_handler.gr.dart';
 import '../routing/app_router.dart';
 import '../routing/navigator/bloc/navigation_bloc.dart';
+import 'app_dependency_injection.dart';
 
 final routeObserver = RouteObserver<MaterialPageRoute>();
 
@@ -30,9 +31,9 @@ class _AppBlocProvidersState extends State<AppBlocProviders> with WidgetsBinding
       child: BlocConsumer<NavigationBloc, NavigationState>(
         listener: (context, state) async {
           if (state is OpenUserView) {
-            await AppRouteHandler().replaceNamed(AppAutoRoute.user);
+            await locator<AppRouteHandler>().replaceNamed(AppAutoRoute.user);
           } else if (state is OpenUserDetailView) {
-            await AppRouteHandler().push(UserDetailViewRoute(userModel: state.userModel));
+            await locator<AppRouteHandler>().push(UserDetailViewRoute(userModel: state.userModel));
           }
         },
         builder: (context, navigationState) {
