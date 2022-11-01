@@ -18,7 +18,7 @@ class UserDetailService extends IUserDetailService {
   @override
   Future<UserDetailModel> fetchUserDetail() async {
     final response = await _networkManager.send<UserDetailModel, UserDetailModel>(
-      NetworkRoutes.USERS.rawValue,
+      NetworkRoutes.USER_DETAIL.rawValue,
       parseModel: UserDetailModel(),
       method: HttpRequestTypes.GET,
     );

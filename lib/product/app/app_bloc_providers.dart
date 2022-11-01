@@ -41,8 +41,8 @@ class _AppBlocProvidersState extends State<AppBlocProviders> with WidgetsBinding
             title: ApplicationConstats.instance.appName,
             theme: ThemeData(),
             debugShowCheckedModeBanner: false,
-            routeInformationParser: AppRouteHandler().defaultRouteParser(),
-            routerDelegate: AppRouteHandler().delegate(
+            routeInformationParser: locator<AppRouteHandler>().defaultRouteParser(),
+            routerDelegate: locator<AppRouteHandler>().delegate(
               navigatorObservers: () => [
                 routeObserver,
               ],

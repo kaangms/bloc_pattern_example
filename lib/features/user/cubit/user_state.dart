@@ -6,6 +6,8 @@ class UserInitialState extends UserState {}
 
 class UsersLoadedState extends UserState {}
 
+class UsersLoadingState extends UserState {}
+
 class AppBarSearchChangeState extends UserState {}
 
 class SearchingState extends UserState {}

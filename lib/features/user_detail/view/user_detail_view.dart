@@ -47,7 +47,6 @@ class _UserDetailViewState extends State<UserDetailView> {
       return const LoadingWidget();
     } else {
       return Text('açıldı');
-      //_bodyListView(cubit);
     }
   }
 }
