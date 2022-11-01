@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/init/network/app_network_manager.dart';
+import '../../../product/widgets/bar/user_info_bar.dart';
 import '../../../product/widgets/bloc_example_appbar/bloc_example_appbar.dart';
 import '../../../product/widgets/loading_widget.dart';
 import '../../user/model/user_model.dart';
@@ -60,44 +61,14 @@ class _UserDetailViewState extends State<UserDetailView> {
               elevation: 0,
             ),
             const SizedBox(height: 20),
-            buildUserInfo(title: 'Tel No', value: cubit.userDetal.phoneNumber),
-            buildUserInfo(title: 'Eposta', value: cubit.userDetal.email),
-            buildUserInfo(title: 'İlçe', value: cubit.userDetal.county),
-            buildUserInfo(title: 'İl', value: cubit.userDetal.city),
-            buildUserInfo(title: 'Ülke', value: cubit.userDetal.country),
+            UserInfoBar(title: 'Tel No', value: cubit.userDetal.phoneNumber),
+            UserInfoBar(title: 'Eposta', value: cubit.userDetal.email),
+            UserInfoBar(title: 'İlçe', value: cubit.userDetal.county),
+            UserInfoBar(title: 'İl', value: cubit.userDetal.city),
+            UserInfoBar(title: 'Ülke', value: cubit.userDetal.country),
           ],
         ),
       );
     }
-  }
-
-  Widget buildUserInfo({required String title, required String? value}) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 8.0, bottom: 18),
-      child: Row(
-        children: [
-          Expanded(
-            flex: 4,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  title,
-                  style: const TextStyle(fontWeight: FontWeight.bold),
-                ),
-                const Text(
-                  ':  ',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            flex: 8,
-            child: Text(value ?? ''),
-          ),
-        ],
-      ),
-    );
   }
 }

@@ -88,6 +88,7 @@ class NetworkManager with DioMixin implements Dio, INetworkManager {
 
   ResponseModel<R> _getResponseResult<T extends INetworkModel, R>(dynamic data, T parserModel, Options? options) {
     final model = _parseBody<R, T>(data, parserModel, options);
+
     return ResponseModel<R>(data: model);
   }
 

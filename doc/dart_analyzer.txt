@@ -1,0 +1,150 @@
+
+lib/core/init/network/network_manager.dart:
+STYLE   Prefer conditional expression.
+        lib/core/init/network/network_manager.dart:79:7
+        prefer-conditional-expressions : https://dartcodemetrics.dev/docs/rules/common/prefer-conditional-expressions
+
+STYLE   Missing blank line before return.
+        lib/core/init/network/network_manager.dart:102:5
+        newline-before-return : https://dartcodemetrics.dev/docs/rules/common/newline-before-return
+
+
+lib/core/init/network/app_network_manager.dart:
+WARNING Prefer trailing comma.
+        lib/core/init/network/app_network_manager.dart:15:7
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+
+lib/core/init/network/network_model_parser.dart:
+STYLE   Missing blank line before return.
+        lib/core/init/network/network_model_parser.dart:29:7
+        newline-before-return : https://dartcodemetrics.dev/docs/rules/common/newline-before-return
+
+
+lib/core/extensions/string_extensions.dart:
+        Long getter. This getter contains 1811 lines with code.
+        lib/core/extensions/string_extensions.dart:2:3
+        long-method : https://dartcodemetrics.dev/docs/anti-patterns/long-method
+
+WARNING Prefer trailing comma.
+        lib/core/extensions/string_extensions.dart:1807:7
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+STYLE   Missing blank line before return.
+        lib/core/extensions/string_extensions.dart:1814:5
+        newline-before-return : https://dartcodemetrics.dev/docs/rules/common/newline-before-return
+
+
+lib/core/base/model/network/empty_model.dart:
+STYLE   Missing blank line before return.
+        lib/core/base/model/network/empty_model.dart:20:5
+        newline-before-return : https://dartcodemetrics.dev/docs/rules/common/newline-before-return
+
+
+lib/features/user_detail/view/user_detail_view.dart:
+STYLE   Block is empty. Empty blocks are often indicators of missing code.
+        lib/features/user_detail/view/user_detail_view.dart:37:36
+        no-empty-block : https://dartcodemetrics.dev/docs/rules/common/no-empty-block
+
+WARNING Prefer trailing comma.
+        lib/features/user_detail/view/user_detail_view.dart:38:9
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+STYLE   Missing blank line before return.
+        lib/features/user_detail/view/user_detail_view.dart:40:11
+        newline-before-return : https://dartcodemetrics.dev/docs/rules/common/newline-before-return
+
+STYLE   Prefer conditional expression.
+        lib/features/user_detail/view/user_detail_view.dart:51:5
+        prefer-conditional-expressions : https://dartcodemetrics.dev/docs/rules/common/prefer-conditional-expressions
+
+
+lib/features/user/view/user_view.dart:
+WARNING Prefer trailing comma.
+        lib/features/user/view/user_view.dart:35:8
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+STYLE   Missing blank line before return.
+        lib/features/user/view/user_view.dart:37:7
+        newline-before-return : https://dartcodemetrics.dev/docs/rules/common/newline-before-return
+
+STYLE   Prefer conditional expression.
+        lib/features/user/view/user_view.dart:53:5
+        prefer-conditional-expressions : https://dartcodemetrics.dev/docs/rules/common/prefer-conditional-expressions
+
+WARNING Prefer trailing comma.
+        lib/features/user/view/user_view.dart:79:21
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+
+lib/product/routing/app_route_handler.gr.dart:
+WARNING Prefer trailing comma.
+        lib/product/routing/app_route_handler.gr.dart:28:33
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+WARNING Prefer trailing comma.
+        lib/product/routing/app_route_handler.gr.dart:30:5
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+STYLE   Missing blank line before return.
+        lib/product/routing/app_route_handler.gr.dart:32:7
+        newline-before-return : https://dartcodemetrics.dev/docs/rules/common/newline-before-return
+
+WARNING Prefer trailing comma.
+        lib/product/routing/app_route_handler.gr.dart:34:11
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+WARNING Prefer trailing comma.
+        lib/product/routing/app_route_handler.gr.dart:41:45
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+WARNING Prefer trailing comma.
+        lib/product/routing/app_route_handler.gr.dart:43:11
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+WARNING Prefer trailing comma.
+        lib/product/routing/app_route_handler.gr.dart:47:15
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+WARNING Prefer trailing comma.
+        lib/product/routing/app_route_handler.gr.dart:51:13
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+WARNING Prefer trailing comma.
+        lib/product/routing/app_route_handler.gr.dart:52:15
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+WARNING Prefer trailing comma.
+        lib/product/routing/app_route_handler.gr.dart:56:19
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+WARNING Prefer trailing comma.
+        lib/product/routing/app_route_handler.gr.dart:58:9
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+WARNING Prefer trailing comma.
+        lib/product/routing/app_route_handler.gr.dart:59:45
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+WARNING Prefer trailing comma.
+        lib/product/routing/app_route_handler.gr.dart:78:7
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+WARNING Prefer trailing comma.
+        lib/product/routing/app_route_handler.gr.dart:82:13
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+
+lib/product/widgets/bloc_example_appbar/bloc_example_appbar.dart:
+WARNING Prefer trailing comma.
+        lib/product/widgets/bloc_example_appbar/bloc_example_appbar.dart:32:21
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+
+lib/product/widgets/cards/user_card.dart:
+WARNING Prefer trailing comma.
+        lib/product/widgets/cards/user_card.dart:33:13
+        prefer-trailing-comma : https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+
+
+hkg@Kaans-MBP bloc_pattern_example % 

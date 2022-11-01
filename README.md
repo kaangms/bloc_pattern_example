@@ -1,16 +1,54 @@
-# bloc_pattern_example
+# Flutter Assignment
 
-A new Flutter project.
+Goal of the assignment is to:
 
-## Getting Started
+* Show the capability of adjusting to the technical environment
+* Demonstrate the will to develop and test high quality features/functionalities
+* Test the candidate knowledge on network calls and state management.
+* Test the candidate on testing
+* Test the candidate on clean-coding field
 
-This project is a starting point for a Flutter application.
+# Assignment Task:
 
-A few resources to get you started if this is your first Flutter project:
+Create a Flutter project that demonstrates server-client communication, navigation flow and a certain form of State Management.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+App will basically contain two screens, one for displaying a list, and one for the detail of the selected item.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The app shall contain sections as follows:
+
+## 1. Main
+
+In this section you will need to demonstrate your skills related to network calls and state management.
+* Implement setup for network calls and state management.
+* Fetch the data from open apis for testing such as; 
+   
+       https://any-api.com/
+       https://rapidapi.com
+   
+You are free to use any open source api of your choice. 
+
+* Using state management inform UI know about the response of the network call.
+* In the page, a search bar is present at the top. It should be functional by filtering your fetched data.
+* Keep in mind that business logic and UI layers should be separated appropriately.
+
+### **Note: Use [dio](https://pub.dev/packages/dio) for network communication & BLoC for state management.**
+
+## 2. Navigation Section
+
+In the list screen from the previous section, you need to navigate to a detail screen when user selects one of the item in the list.
+
+### **Note: Use [auto route](https://pub.dev/packages/auto_route) for navigation.**
+
+
+## 3. Testing Section
+
+Try to demonstate at least one for each of the following:
+
+1. Unit Test
+2. Widget Test
+
+Add any additional functionality / cleanup you think would improve the app (bonus points)
+
+---
+
+Please publish your work (repository) to the your github account and share the link with us.
