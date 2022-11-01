@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class UserDetailView extends StatefulWidget {
-  UserDetailView({Key? key}) : super(key: key);
+import '../../user/model/user_model.dart';
 
+class UserDetailView extends StatefulWidget {
+  const UserDetailView({
+    Key? key,
+    required this.userModel,
+  }) : super(key: key);
+  final UserModel userModel;
   @override
   State<UserDetailView> createState() => _UserDetailViewState();
 }
@@ -10,6 +15,8 @@ class UserDetailView extends StatefulWidget {
 class _UserDetailViewState extends State<UserDetailView> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Text(widget.userModel.name ?? ''),
+    );
   }
 }

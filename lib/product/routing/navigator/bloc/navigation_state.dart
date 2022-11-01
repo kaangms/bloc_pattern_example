@@ -7,4 +7,8 @@ class NavigationInitial extends NavigationState {}
 
 class OpenUserView extends NavigationState {}
 
-class OpenUserDetailView extends NavigationState {}
+class OpenUserDetailView extends NavigationState {
+  final UserModel userModel;
+
+  OpenUserDetailView({required this.userModel});
+}

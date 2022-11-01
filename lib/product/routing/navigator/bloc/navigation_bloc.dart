@@ -9,6 +9,6 @@ part 'navigation_state.dart';
 class NavigationBloc extends Bloc<NavigationEvent, NavigationState> {
   NavigationBloc() : super(NavigationInitial()) {
     on<NavigateToUserView>((event, emit) => emit(OpenUserView()));
-    on<NavigateToUserDetailView>((event, emit) => emit(OpenUserDetailView()));
+    on<NavigateToUserDetailView>((event, emit) => emit(OpenUserDetailView(userModel: event.userModel)));
   }
 }

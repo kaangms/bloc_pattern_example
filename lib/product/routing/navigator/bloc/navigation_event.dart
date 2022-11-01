@@ -8,4 +8,8 @@ abstract class NavigationEvent extends Equatable {
 
 class NavigateToUserView extends NavigationEvent {}
 
-class NavigateToUserDetailView extends NavigationEvent {}
+class NavigateToUserDetailView extends NavigationEvent {
+  final UserModel userModel;
+
+  NavigateToUserDetailView({required this.userModel});
+}

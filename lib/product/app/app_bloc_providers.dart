@@ -32,7 +32,7 @@ class _AppBlocProvidersState extends State<AppBlocProviders> with WidgetsBinding
           if (state is OpenUserView) {
             await AppRouteHandler().replaceNamed(AppAutoRoute.user);
           } else if (state is OpenUserDetailView) {
-            await AppRouteHandler().replaceNamed(AppAutoRoute.userDetail);
+            await AppRouteHandler().push(UserDetailViewRoute(userModel: state.userModel));
           }
         },
         builder: (context, navigationState) {

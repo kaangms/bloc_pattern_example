@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../service/user_service.dart';
+part 'user_state.dart';
 
 class UserCubit extends Cubit<UserState> {
   UserCubit(this.userService) : super(UserInitialState()) {
@@ -21,10 +22,10 @@ class UserCubit extends Cubit<UserState> {
 
   List<UserModel> users = <UserModel>[];
   List<UserModel> _preSearchUsers = <UserModel>[];
-  bool statusSearch = false;
+  bool searchStatus = false;
   // bool isHasSearchAction = true;
   void changeStatusSearch() {
-    statusSearch = !statusSearch;
+    searchStatus = !searchStatus;
     emit(AppBarSearchChangeState());
   }
 
@@ -41,20 +42,4 @@ class UserCubit extends Cubit<UserState> {
   void navigateToUserDetailView(BuildContext context, UserModel user) {
     emit(UserViewNavigateToUserDetailView(user));
   }
-}
-
-abstract class UserState {}
-
-class UserInitialState extends UserState {}
-
-class UsersLoadedState extends UserState {}
-
-class AppBarSearchChangeState extends UserState {}
-
-class SearchingState extends UserState {}
-
-class UserViewNavigateToUserDetailView extends UserState {
-  final UserModel selectedUser;
-
-  UserViewNavigateToUserDetailView(this.selectedUser);
 }
