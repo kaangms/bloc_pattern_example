@@ -6,4 +6,6 @@ class UserDetialInitialState extends UserDetailState {}
 
 class UserDetailLoadedState extends UserDetailState {}
 
+class UserDetailNotFoundState extends UserDetailState {}
+
 class NavigateToBack extends UserDetailState {}

@@ -1,3 +1,5 @@
+// ignore_for_file: unused_catch_stack
+
 part of 'network_manager.dart';
 
 extension _CoreNetworkServiceExtension on NetworkManager {

@@ -1,4 +1,4 @@
-// ignore_for_file: implementation_imports
+// ignore_for_file: implementation_imports, unused_catch_stack
 
 import 'dart:convert';
 import 'dart:io';

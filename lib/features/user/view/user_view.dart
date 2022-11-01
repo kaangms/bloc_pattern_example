@@ -1,5 +1,3 @@
-import 'package:auto_route/auto_route.dart';
-import 'package:bloc_pattern_example/core/extensions/context_extensions.dart';
 import 'package:bloc_pattern_example/features/user/cubit/user_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

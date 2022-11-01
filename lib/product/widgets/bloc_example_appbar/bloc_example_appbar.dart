@@ -60,8 +60,7 @@ class BlocExampleAppBar extends AppBar {
                       onEditingComplete: () => changesearchStatus != null ? changesearchStatus() : null,
                     )),
               ),
-            // if (!searchStatus && isHasSearchAction)
-            if (!searchStatus)
+            if (!searchStatus && isHasSearchBar)
               InkWell(
                 onTap: () => changesearchStatus != null ? changesearchStatus() : null,
                 child: const Padding(

@@ -9,18 +9,19 @@ abstract class IUserDetailService {
 
   IUserDetailService(INetworkManager networkManager) : _networkManager = networkManager;
 
-  Future<UserDetailModel> fetchUserDetail();
+  Future<UserDetailModel> fetchUserDetail(String userId);
 }
 
 class UserDetailService extends IUserDetailService {
   UserDetailService(INetworkManager networkManager) : super(networkManager);
 
   @override
-  Future<UserDetailModel> fetchUserDetail() async {
+  Future<UserDetailModel> fetchUserDetail(String userId) async {
     final response = await _networkManager.send<UserDetailModel, UserDetailModel>(
       NetworkRoutes.USER_DETAIL.rawValue,
       parseModel: UserDetailModel(),
       method: HttpRequestTypes.GET,
+      urlSuffix: '/$userId',
     );
 
     return response.data ?? UserDetailModel();

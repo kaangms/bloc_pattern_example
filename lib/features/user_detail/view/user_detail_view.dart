@@ -1,3 +1,4 @@
+import 'package:bloc_pattern_example/product/widgets/cards/user_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -22,7 +23,10 @@ class _UserDetailViewState extends State<UserDetailView> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => UserDetailCubit(UserDetailService(AppNetworkManager.instance.networkManager)),
+      create: (context) => UserDetailCubit(
+        UserDetailService(AppNetworkManager.instance.networkManager),
+        widget.userModel.id,
+      ),
       child: _scaffoldBuild(context),
     );
   }
@@ -46,7 +50,50 @@ class _UserDetailViewState extends State<UserDetailView> {
     if (state is UserDetialInitialState) {
       return const LoadingWidget();
     } else {
-      return Text('açıldı');
+      return Column(
+        children: [
+          UserCard(
+            avatar: widget.userModel.avatar,
+            name: widget.userModel.name,
+          ),
+          const SizedBox(height: 20),
+          buildUserInfo(title: 'Tel No', value: cubit.userDetal.phoneNumber),
+          buildUserInfo(title: 'Eposta', value: cubit.userDetal.email),
+          buildUserInfo(title: 'İlçe', value: cubit.userDetal.county),
+          buildUserInfo(title: 'İl', value: cubit.userDetal.city),
+          buildUserInfo(title: 'Ülke', value: cubit.userDetal.country),
+        ],
+      );
     }
+  }
+
+  Widget buildUserInfo({required String title, required String? value}) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 18),
+      child: Row(
+        children: [
+          Expanded(
+            flex: 4,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
+                const Text(
+                  ':  ',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            flex: 8,
+            child: Text(value ?? ''),
+          ),
+        ],
+      ),
+    );
   }
 }

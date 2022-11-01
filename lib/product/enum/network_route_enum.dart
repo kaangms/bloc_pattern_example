@@ -12,7 +12,7 @@ extension NetworkRoutesString on NetworkRoutes {
       case NetworkRoutes.USERS:
         return 'users';
       case NetworkRoutes.USER_DETAIL:
-        return 'userdetails';
+        return 'userdetail';
 
       default:
         throw Exception('Routes not found');
